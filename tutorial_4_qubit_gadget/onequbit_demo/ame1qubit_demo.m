@@ -47,7 +47,7 @@ rho = rho0;
 e1list = [];
 e2list = [];
 
-tf = 100e-6;
+tf = 2e-6;
 tic
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %timestep between each ode executions
