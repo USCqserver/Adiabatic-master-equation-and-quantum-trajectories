@@ -69,7 +69,7 @@ B_sp1 = @(s)interp1(slist,B_s,s);
 
 
 %tf = 2e-6;
-tf = 100e-6;
+tf = 2e-6;
 hbar = 1;
 tic
 % Quantum trajectory by using waiting time distribution
