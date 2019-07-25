@@ -1,5 +1,6 @@
 %kawayip@usc.edu
 %8-qubit_chain
+%function ame use the function lindblad on line 189 to run. 
 function ame
 %warning('off','MATLAB:eigs:TooManyRequestedEigsForRealSym')
 % % Define Pauli matrices
@@ -9,7 +10,9 @@ sZ = [1 0; 0 -1];
 unit = speye(2);
 natom = 8;
 
+%nevel means number of eigenvalues
 neval = 2^natom;
+%nevaltruc means number of truncations
 nevaltruc = 18;
 
 % Define tensor product of Pauli matrices
@@ -51,6 +54,7 @@ IIIIIIsZsZ = kron(kron(kron(kron(kron(kron(kron(unit,unit),unit),unit),unit),uni
 
 plus = [1/sqrt(2); 1/sqrt(2)];
 
+%these lines mean to read from file
 dlm = dlmread('DW1_parameters.txt');
 slist = dlm(:,1).';
 A_s = dlm(:,2).';
@@ -78,7 +82,7 @@ if ~issorted(diag(D))
     V = V(:, I);
     fprintf('sorted');
 end
-diag(D)
+%e, v are eigenvalus and eigenvectors
 e = zeros(1,nevaltruc);
 v = sparse(V(:,1:nevaltruc));
 for i = 1:nevaltruc
@@ -108,6 +112,7 @@ dt_me = tf/1000;
 tstep_me = 0:dt_me:tf;
 fidelitylist_me = zeros(1, numel(tstep_me));
 
+%a for loop inside each step use ode solver
 for index = 1:numel(tstep_me)
     Hs = -1e9.*A_sp1(tstep_me(index)./tf).*(sX_1+sX_2+sX_3+sX_4+sX_5+sX_6+sX_7+sX_8) + 1e9.*B_sp1(tstep_me(index)./tf).*((-1).*((1/4).*sZ_1)...
      + ((-1).*sZsZIIIIII + (-1).*IsZsZIIIII + (-1).*IIsZsZIIII + (-1).*IIIsZsZIII + (-1).*IIIIsZsZII + (-1).*IIIIIsZsZI...
@@ -122,22 +127,27 @@ for index = 1:numel(tstep_me)
         V = V(:, I);
         fprintf('sorted');
     end
+    %e, v eigenvalues and eigenvectors.
     v = sparse(neval,nevaltruc);
     e = sparse(1,nevaltruc);
     
+    %make them sparse
     for ii = 1:nevaltruc
         v(:,ii) = sparse(V(:,ii));
         e(ii) = sparse(D(ii,ii));
     end
+    
+    %diagonalized H and rho
     Hsd = v'*Hs*v;
     v0 = v(:,1);
     rhom = reshape(rho,[neval,neval]);
     rhomcb = sparse(v'*rhom*v);
     
-
+    %ground state population
     fidelity = rhomcb(1,1);
     fidelitylist_me(1, index) = fidelity;
     
+    %ode solver
     alindblad  = @(t, rho)lindblad(t, rho, Hsd, natom, gsq2pi, beta, betainv, wc, A_1,A_2,A_3,A_4,A_5,A_6,A_7,A_8,v,e);
     t    = [tstep_me(index), tstep_me(index) + dt_me];
     options = odeset('RelTol',1e-3,'AbsTol',1e-6);
@@ -149,9 +159,10 @@ for index = 1:numel(tstep_me)
     rho = rho(:);
 end
 
-
+%time taken to run
 eptime = toc
 
+%plot fidelity
 figure(1)
 plot(tstep_me, fidelitylist_me,'-b','LineWidth',2);
 xlabel('$t$','Interpreter','latex')
@@ -165,6 +176,7 @@ xlabel('$s$','Interpreter','latex')
 ylabel('$fidelity$','Interpreter','latex')
 title(['tf: ' num2str(tf)])
 
+%store fidelity
 txt1 = sprintf('ame%d.txt',tf);
 fid1 = fopen(txt1,'w');
 fprintf(fid1,'%13d %8d\n',[tstep_me;fidelitylist_me]);
@@ -172,6 +184,8 @@ fclose(fid1);
 
 
 %function drhodt = lindblad(~, rho, Hsd, natom, g, beta, wc,A_1,A_2,A_3,A_4,A_5,A_6,A_7,A_8,v,e)
+
+%function needed for ode intergration: calculate the lindblad terms
 function drhodt = lindblad(~, rho, Hsd, natom, gsq2pi, beta, betainv, wc,A_1,A_2,A_3,A_4,A_5,A_6,A_7,A_8,v,e)
 neval = 2^natom;
 nevaltruc = 18;
@@ -183,9 +197,11 @@ drhodt = -1i*(Hsd*rhomcb - rhomcb*Hsd);
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 X = bsxfun(@minus, e.', e);
 
+%sorted jump operators
 [sortedOutput,~,~] = uniquetol(full(reshape(X,[1 nevaltruc^2])),0.1,'DataScale',1);%AbsTol
 length(sortedOutput(sortedOutput>0));
 count = 0;
+%Lindblad for w>0
 for w = sortedOutput(sortedOutput>0)
     gamma = (gsq2pi*w*exp(-abs(w)/wc))/(1 - exp(-beta*w));
     if isnan(gamma) || isinf(gamma)
@@ -194,6 +210,7 @@ for w = sortedOutput(sortedOutput>0)
     [b, a] = ind2sub(size(X), find(abs(X - w)<= 0.1));% AbsTol
     count = count+length(b);
 
+    %use sparse matrix
     Lpcomponents1 = sparse(nevaltruc,nevaltruc); 
     Lpcomponents2 = sparse(nevaltruc,nevaltruc);
     Lpcomponents3 = sparse(nevaltruc,nevaltruc);
