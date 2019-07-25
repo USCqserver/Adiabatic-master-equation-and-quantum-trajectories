@@ -27,3 +27,9 @@ The master equation is:
 
 
 Both ame.m and aqt.m use sparse matrix for computation. aqt.m uses parallel computation.
+
+
+## Tutorial: UCL 4 qubit gadgets (and a single qubit)
+The folder "tutorial_4_qubit_gadget" contains a tutorial on how to run the codes. 
+![alt text](https://github.com/kwyip/Adiabatic-master-equation-and-quantum-trajectories/blob/master/4-qubit.png)
+It has a "onequbit_demo" for how to run codes on a single qubit. The pdf file "kawacode.pdf" contains a presentation on excecutions.
