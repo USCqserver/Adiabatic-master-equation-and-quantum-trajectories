@@ -1,5 +1,6 @@
 %kawayip@usc.edu
 %8-qubit_chain
+%function ame use the subfunction indbladsearch to run
 function aqt
 % % Define Pauli matrices
 sX = [0 1; 1 0];
@@ -7,7 +8,9 @@ sZ = [1 0; 0 -1];
 unit = speye(2);
 
 natom = 8;
+%nevel means number of eigenvalues
 neval = 2^natom;
+%nevaltruc means number of truncations
 nevaltruc = 18;
 %number of Lindblad operators
 nLind = nevaltruc*(nevaltruc-1)+1;
@@ -69,6 +72,7 @@ gsq2pi = (1.2)*1e-4; %g^2*pi
 betainv = 2.6*1e9; %1/beta
 
 %fidelityendlist_me = [];
+%these lines mean to read from file
 dlm = dlmread('DW1_parameters.txt');
 slist = dlm(:,1).';
 A_s = dlm(:,2).'; 
@@ -89,7 +93,7 @@ fidelitylistmat_qt = zeros(ntraj, numel(tstep_qt));
 unpsinormlistmat_qt = zeros(ntraj, numel(tstep_qt));
 jlistmat_qt = zeros(ntraj, 1000);
 
-
+%parfor: parallel. To not use parallel, use for
 parfor n = 1:ntraj
     psi = psi0;
     unpsi = psi0;
@@ -106,6 +110,7 @@ parfor n = 1:ntraj
                 + ((-1).*sZsZIIIIII + (-1).*IsZsZIIIII + (-1).*IIsZsZIIII + (-1).*IIIsZsZIII + (-1).*IIIIsZsZII + (-1).*IIIIIsZsZI...
                 + (-1).*IIIIIIsZsZ));
         [V,D] = eig(full(Hs));
+        %make sure eigenmatrix is sorted
         if ~issorted(diag(D))
             %[V,D] = eigs(Hs,18,'sa');
             [V,D] = eig(full(Hs));
@@ -114,10 +119,12 @@ parfor n = 1:ntraj
             V = V(:, I);
             sorted = 1
         end
+        %make them sparse
         for ii = 1:nevaltruc
             v(:,ii) = sparse(V(:,ii));
             e(ii) = sparse(D(ii,ii));
         end
+        %diagonalized H and rho
         Hsd = v'*Hs*v;
         psicb = v'*psi;
         unpsicb = v'*unpsi;
@@ -129,6 +136,7 @@ parfor n = 1:ntraj
         fidelitylist_qt(1, index) = fidelity; 
         
         X = bsxfun(@minus, e.', e);   %matrix of \omega_{ba}
+        %sorted jump operators
         [sortedOutput,~,~] = uniquetol(full(reshape(X,[1 nevaltruc^2])),0.1,'DataScale',1); %AbsTol
         length(sortedOutput(sortedOutput>0));
         w_unique = length(sortedOutput);
