@@ -26,8 +26,19 @@ The master equation is:
 
 
 
-Both ame.m and aqt.m use sparse matrix for computation. aqt.m uses parallel computation.
+Both ame.m and aqt.m use sparse matrix for computation,
+![alt text](https://github.com/kwyip/Adiabatic-master-equation-and-quantum-trajectories/blob/master/sparsem.png)
+and rotation for every ode step.
+![alt text](https://github.com/kwyip/Adiabatic-master-equation-and-quantum-trajectories/blob/master/ame1.png)
 
+aqt.m uses parallel computation, with sorting of jump operators,
+![alt text](https://github.com/kwyip/Adiabatic-master-equation-and-quantum-trajectories/blob/master/ame1.png)
+and backtracking for error control.
+![alt text](https://github.com/kwyip/Adiabatic-master-equation-and-quantum-trajectories/blob/master/ame1.png)
+
+
+For quantum trajectories,
+![alt text](https://github.com/kwyip/Adiabatic-master-equation-and-quantum-trajectories/blob/master/ame1.png)
 
 ## Tutorial: UCL 4 qubit gadgets (and a single qubit)
 The folder "tutorial_4_qubit_gadget" contains a tutorial on how to run the codes. 
