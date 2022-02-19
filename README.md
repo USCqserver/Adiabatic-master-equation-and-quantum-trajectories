@@ -27,14 +27,14 @@ The master equation is:
 
 
 Both ame.m and aqt.m use sparse matrix for computation,
-![alt text](https://github.com/USCqserver/images/Adiabatic-master-equation-and-quantum-trajectories/blob/master/images/sparsem (1).png)
+![alt text](https://github.com/USCqserver/images/Adiabatic-master-equation-and-quantum-trajectories/blob/master/images/sparsem%20(1).png)
 and rotation for every ode step.
-![alt text](https://github.com/USCqserver/images/Adiabatic-master-equation-and-quantum-trajectories/blob/master/images/rotation (1).png)
+![alt text](https://github.com/USCqserver/images/Adiabatic-master-equation-and-quantum-trajectories/blob/master/images/rotation%20(1).png)
 
 aqt.m uses parallel computation, with sorting of jump operators,
-![alt text](https://github.com/USCqserver/images/Adiabatic-master-equation-and-quantum-trajectories/blob/master/images/sortingjump (1).png)
+![alt text](https://github.com/USCqserver/images/Adiabatic-master-equation-and-quantum-trajectories/blob/master/images/sortingjump%20(1).png)
 and backtracking for error control.
-![alt text](https://github.com/USCqserver/images/Adiabatic-master-equation-and-quantum-trajectories/blob/master/images/backtracking (1).png)
+![alt text](https://github.com/USCqserver/images/Adiabatic-master-equation-and-quantum-trajectories/blob/master/images/backtracking%20(1).png)
 
 
 
