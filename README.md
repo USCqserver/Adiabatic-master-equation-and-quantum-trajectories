@@ -17,7 +17,7 @@
 ## Motivation[![](./docs/img/pin.svg)](#motivation)
 Code of adiabatic master equation and quantum trajectories used.
 
-These are the codes of adiabatic master equation (`ame.m`) and quantum trajectories (`aqt.m`) used in the [paper](https://journals.aps.org/pra/abstract/10.1103/PhysRevA.97.022116)
+These are the codes of adiabatic master equation (`ame.m`) and quantum trajectories (`aqt.m`) used in the [paper](https://journals.aps.org/pra/abstract/10.1103/PhysRevA.97.022116).
 
 The Hamiltonian is a 8-qubit ferromagnetic Ising spin chain in a transverse field, with annealing schedule attached as `DW1_parameters.txt`. This relatively complex problem illustrates a lot of subtle points in the implementation of ame and aqt, and can be easily reduced to smaller and simpler problems. 
 
@@ -59,7 +59,7 @@ and backtracking for error control.
 ---
 ## Tutorial: UCL 4 qubit gadgets and a single qubit <a name="tutorial"></a>
 ### UCL 4 qubit gadgets <a name="ucl"></a>
-The folder "tutorial_4_qubit_gadget" contains a tutorial on how to run the codes. 
+The folder [tutorial_4_qubit_gadget](https://github.com/USCqserver/Adiabatic-master-equation-and-quantum-trajectories/tree/master/tutorial_4_qubit_gadget) contains a tutorial on how to run the codes. 
 ![alt text](https://github.com/USCqserver/Adiabatic-master-equation-and-quantum-trajectories/blob/master/images/4-qubit.png)
 ### Single qubit <a name="single"></a>
-It has a "onequbit_demo" for how to run codes on a single qubit. The pdf file "kawacode.pdf" contains a presentation on excecutions.
+It has a "onequbit_demo" for how to run codes on a single qubit. The pdf file [kawacode.pdf](https://github.com/USCqserver/Adiabatic-master-equation-and-quantum-trajectories/blob/master/tutorial_4_qubit_gadget/kawacode.pdf) contains a presentation on excecutions.
