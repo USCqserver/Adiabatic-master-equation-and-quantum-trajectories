@@ -16,7 +16,6 @@
 6. [Conclusion](#Conclusion)
 ---
 
----
 ## Motivation[![](./docs/img/pin.svg)](#motivation)
 Code of adiabatic master equation and quantum trajectories used.
 
