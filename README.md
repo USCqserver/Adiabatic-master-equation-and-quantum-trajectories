@@ -8,7 +8,6 @@
 ## Project Status 
 <table class="no-border">
     <td><img src="https://img.shields.io/badge/MATLAB-R2020a-BLUE.svg" alt="MATLAB solution"/></td>
-  </tr>
 </table>
 ---
 Code of adiabatic master equation and quantum trajectories used in paper
