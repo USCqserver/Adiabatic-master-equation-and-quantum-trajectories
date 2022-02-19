@@ -6,7 +6,8 @@
 <img src="https://img.shields.io/badge/MATLAB-R2020a-BLUE.svg" alt="MATLAB solution"/>
 
 ---
-Code of adiabatic master equation and quantum trajectories used in paper
+Code of adiabatic master equation and quantum trajectories used.
+
 These are the codes of adiabatic master equation (ame.m) and quantum trajectories (aqt.m) used in paper:
 https://journals.aps.org/pra/abstract/10.1103/PhysRevA.97.022116
 
