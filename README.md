@@ -59,8 +59,8 @@ and backtracking for error control.
 
 ---
 ## Tutorial: UCL 4 qubit gadgets and a single qubit <a name="tutorial"></a>
-### UCL 4 qubit gadgets[![](./docs/img/pin.svg)](#ucl)
+### UCL 4 qubit gadgets <a name="ucl"></a>
 The folder "tutorial_4_qubit_gadget" contains a tutorial on how to run the codes. 
 ![alt text](https://github.com/USCqserver/Adiabatic-master-equation-and-quantum-trajectories/blob/master/images/4-qubit.png)
-### Single qubit[![](./docs/img/pin.svg)](#single)
+### Single qubit <a name="single"></a>
 It has a "onequbit_demo" for how to run codes on a single qubit. The pdf file "kawacode.pdf" contains a presentation on excecutions.
