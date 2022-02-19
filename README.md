@@ -6,6 +6,18 @@
 <img src="https://img.shields.io/badge/MATLAB-R2022a-BLUE.svg" alt="MATLAB solution"/>
 
 ---
+
+## Table of contents[![](./docs/img/pin.svg)](#table-of-contents)
+1. [Motivation](#motivation)
+2. [File Input format](#FileInputformat)
+   - [Example](#example)
+4. [Solution](#Solution)
+5. [Implementation](#Implementation)
+6. [Conclusion](#Conclusion)
+---
+
+---
+## Motivation[![](./docs/img/pin.svg)](#motivation)
 Code of adiabatic master equation and quantum trajectories used.
 
 These are the codes of adiabatic master equation (ame.m) and quantum trajectories (aqt.m) used in paper:
