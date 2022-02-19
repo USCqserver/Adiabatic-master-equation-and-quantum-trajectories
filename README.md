@@ -27,9 +27,6 @@ The Hamiltonian is a 8-qubit ferromagnetic Ising spin chain in a transverse fiel
 
 
 
-
-
-
 The master equation is:
 
 ![alt text](https://github.com/kwyip/Adiabatic-master-equation-and-quantum-trajectories/blob/master/ame1.png)
@@ -61,7 +58,7 @@ and backtracking for error control.
 
 
 ---
-## Tutorial: UCL 4 qubit gadgets and a single qubit[![](./docs/img/pin.svg)](#tutorial) 
+## Tutorial: UCL 4 qubit gadgets and a single qubit <a name="tutorial"></a>
 ### UCL 4 qubit gadgets[![](./docs/img/pin.svg)](#ucl)
 The folder "tutorial_4_qubit_gadget" contains a tutorial on how to run the codes. 
 ![alt text](https://github.com/USCqserver/Adiabatic-master-equation-and-quantum-trajectories/blob/master/images/4-qubit.png)
