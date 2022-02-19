@@ -3,8 +3,6 @@
 </h1>
 
 ![Latest release](https://img.shields.io/github/v/release/aregtech/areg-sdk?label=%20%F0%9F%93%A3%20Latest%20release&style=flat&logoColor=b0c0c0&labelColor=363D44)
-
-<!-- markdownlint-disable -->
 <td><img src="https://img.shields.io/badge/MATLAB-R2020a-BLUE.svg" alt="MATLAB solution"/></td>
 
 ---
