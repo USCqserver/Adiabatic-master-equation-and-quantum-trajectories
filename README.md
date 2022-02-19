@@ -9,9 +9,6 @@
 
 ## Table of contents[![](./docs/img/pin.svg)](#table-of-contents)
 1. [Motivation](#motivation)
-2. [File Input format](#FileInputformat)
-4. [Solution](#Solution)
-5. [Implementation](#Implementation)
 6. [Tutorial](#tutorial)
     - [UCL 4 qubit gadgets](#ucl)
     - [Single qubit](#single)
