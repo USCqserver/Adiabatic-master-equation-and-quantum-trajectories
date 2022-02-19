@@ -27,19 +27,19 @@ The master equation is:
 
 
 Both ame.m and aqt.m use sparse matrix for computation,
-![alt text](https://github.com/USCqserver/images/Adiabatic-master-equation-and-quantum-trajectories/blob/master/images/sparsem%20(1).png)
+![alt text](https://github.com/USCqserver/Adiabatic-master-equation-and-quantum-trajectories/blob/master/images/sparsem%20(1).png)
 and rotation for every ode step.
-![alt text](https://github.com/USCqserver/images/Adiabatic-master-equation-and-quantum-trajectories/blob/master/images/rotation%20(1).png)
+![alt text](https://github.com/USCqserver/Adiabatic-master-equation-and-quantum-trajectories/blob/master/images/rotation%20(1).png)
 
 aqt.m uses parallel computation, with sorting of jump operators,
-![alt text](https://github.com/USCqserver/images/Adiabatic-master-equation-and-quantum-trajectories/blob/master/images/sortingjump%20(1).png)
+![alt text](https://github.com/USCqserver/Adiabatic-master-equation-and-quantum-trajectories/blob/master/images/sortingjump%20(1).png)
 and backtracking for error control.
-![alt text](https://github.com/USCqserver/images/Adiabatic-master-equation-and-quantum-trajectories/blob/master/images/backtracking%20(1).png)
+![alt text](https://github.com/USCqserver/Adiabatic-master-equation-and-quantum-trajectories/blob/master/images/backtracking%20(1).png)
 
 
 
 ## Tutorial: UCL 4 qubit gadgets (and a single qubit)
 The folder "tutorial_4_qubit_gadget" contains a tutorial on how to run the codes. 
-![alt text](https://github.com/USCqserver/images/Adiabatic-master-equation-and-quantum-trajectories/blob/master/images/4-qubit.png)
+![alt text](https://github.com/USCqserver/Adiabatic-master-equation-and-quantum-trajectories/blob/master/images/4-qubit.png)
 
 It has a "onequbit_demo" for how to run codes on a single qubit. The pdf file "kawacode.pdf" contains a presentation on excecutions.
