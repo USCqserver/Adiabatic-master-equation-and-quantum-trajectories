@@ -13,6 +13,7 @@
 3. [Tutorial](#tutorial)
     - [UCL 4 qubit gadgets](#ucl)
     - [Single qubit](#single)
+4. [Reference](#reference)
 ---
 
 ## Motivation[![](./docs/img/pin.svg)](#motivation)
@@ -65,3 +66,6 @@ The folder [tutorial_4_qubit_gadget](https://github.com/USCqserver/Adiabatic-mas
 ![alt text](https://github.com/USCqserver/Adiabatic-master-equation-and-quantum-trajectories/blob/master/images/4-qubit.png)
 ### Single qubit <a name="single"></a>
 A "onequbit_demo" instruction was made for how to run codes on a single qubit. The pdf file [kawacode.pdf](https://github.com/USCqserver/Adiabatic-master-equation-and-quantum-trajectories/blob/master/tutorial_4_qubit_gadget/kawacode.pdf) contains a presentation on excecutions.
+
+## Reference <a name="reference"></a>
+<a id="1">[1]</a> 
