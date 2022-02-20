@@ -9,7 +9,8 @@
 
 ## Table of contents[![](./docs/img/pin.svg)](#table-of-contents)
 1. [Motivation](#motivation)
-6. [Tutorial](#tutorial)
+2. [Code description](#codedescription)
+3. [Tutorial](#tutorial)
     - [UCL 4 qubit gadgets](#ucl)
     - [Single qubit](#single)
 ---
@@ -17,6 +18,7 @@
 ## Motivation[![](./docs/img/pin.svg)](#motivation)
 Code of adiabatic master equation and quantum trajectories used.
 
+## Code description <a name="codedescription"></a>
 These are the codes of adiabatic master equation (`ame.m`) and quantum trajectories (`aqt.m`) used in the [paper](https://journals.aps.org/pra/abstract/10.1103/PhysRevA.97.022116) *Quantum trajectories for time-dependent adiabatic master equations*.
 
 The Hamiltonian is a 8-qubit ferromagnetic Ising spin chain in a transverse field, with annealing schedule attached as `DW1_parameters.txt`. This relatively complex problem illustrates a lot of subtle points in the implementation of ame and aqt, and can be easily reduced to smaller and simpler problems. 
