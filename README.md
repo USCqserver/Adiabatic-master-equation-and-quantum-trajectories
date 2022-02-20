@@ -49,7 +49,7 @@ and perform basis rotation for every ode step.
 
 ![alt text](https://github.com/USCqserver/Adiabatic-master-equation-and-quantum-trajectories/blob/master/images/rotation%20(1).png)
 
-aqt.m uses parallel computation, with sorting of jump operators,
+`aqt.m` uses parallel computation, with sorting of jump operators,
 
 ![alt text](https://github.com/USCqserver/Adiabatic-master-equation-and-quantum-trajectories/blob/master/images/sortingjump%20(1).png)
 
