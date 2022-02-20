@@ -59,7 +59,6 @@ and backtracking for error control.
 ![alt text](https://github.com/USCqserver/Adiabatic-master-equation-and-quantum-trajectories/blob/master/images/backtracking%20(1).png)
 
 
----
 ## Tutorial: UCL 4 qubit gadgets and a single qubit <a name="tutorial"></a>
 ### UCL 4 qubit gadgets <a name="ucl"></a>
 The folder [tutorial_4_qubit_gadget](https://github.com/USCqserver/Adiabatic-master-equation-and-quantum-trajectories/tree/master/tutorial_4_qubit_gadget) contains a tutorial on how to run the codes. 
