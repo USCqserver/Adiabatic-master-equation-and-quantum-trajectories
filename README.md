@@ -1,7 +1,7 @@
 <h1 align="center" style="display: block; font-size: 2.5em; font-weight: bold; margin-block-start: 1em; margin-block-end: 1em;">
 <br><br><strong> Adiabatic master equation and quantum trajectories</strong>
 </h1>
-
+[![License](https://img.shields.io/github/license/Qiskit/qiskit-terra.svg?style=popout-square)](https://opensource.org/licenses/Apache-2.0)
 ![Latest release](https://img.shields.io/github/v/release/aregtech/areg-sdk?label=%20%F0%9F%93%A3%20Latest%20release&style=flat&logoColor=b0c0c0&labelColor=363D44)
 <img src="https://img.shields.io/badge/MATLAB-R2022a-BLUE.svg" alt="MATLAB solution"/>
 
